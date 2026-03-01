@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     // 'lang' attribute is updated dynamically by LanguageProvider on the client
-    <html lang="es">
+    <html lang="en">
       <head>
         {/* Google Analytics (gtag.js) */}
         <Script

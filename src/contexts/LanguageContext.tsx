@@ -13,7 +13,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<LanguageCode>("es"); // Default to Spanish as requested
+  const [language, setLanguageState] = useState<LanguageCode>("en"); // Default to English as requested
   
   // Initialize from localStorage if available (client-side only)
   useEffect(() => {
