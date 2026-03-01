@@ -3,37 +3,19 @@
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AdUnit from "@/components/AdUnit";
+import { blogData } from "@/data/blogData";
 
 export default function BlogClient() {
   const { t, language } = useLanguage();
 
-  const blogPosts = [
-    {
-      slug: "ruleta-decisiones-aleatorias-gratis",
-      title: "Ruleta de Decisiones Aleatorias Online Gratis",
-      desc: "La mejor herramienta para elegir opciones rápidamente y sin sesgos."
-    },
-    {
-      slug: "como-hacer-sorteo-ruleta-personalizada",
-      title: "Cómo Hacer un Sorteo con Ruleta Personalizada",
-      desc: "Guía paso a paso para organizar rifas y sorteos profesionales."
-    },
-    {
-      slug: "ruleta-nombres-sorteos-en-vivo",
-      title: "Ruleta de Nombres para Sorteos en Vivo",
-      desc: "Potencia tus streamings y eventos con interacción en tiempo real."
-    },
-    {
-      slug: "juego-ruleta-videollamadas-amigos",
-      title: "Juego de Ruleta para Videollamadas",
-      desc: "Diviértete con amigos en Zoom, Google Meet o Teams con retos divertidos."
-    },
-    {
-      slug: "generador-opciones-girar-rueda",
-      title: "Generador de Opciones para Girar la Rueda",
-      desc: "Versatilidad total para tomar decisiones de película, comida or estudio."
-    }
-  ];
+  const blogPosts = Object.entries(blogData).map(([slug, translations]) => {
+    const data = translations[language] || translations['es'];
+    return {
+      slug,
+      title: data.title,
+      desc: data.excerpt
+    };
+  });
 
   return (
     <div className="flex flex-col w-full h-full gap-8 py-10">

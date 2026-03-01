@@ -13,6 +13,9 @@ export const translations = {
     navHome: "Inicio",
     navBlog: "Blog",
     blogTitle: "Guías y Recursos",
+    readMore: "Leer más",
+    readyToTryLuck: "¿Listo para probar tu suerte?",
+    callToActionDesc: "Prueba nuestra ruleta aleatoria gratuita y personalizada hoy mismo.",
   },
   en: {
     languageName: "English",
@@ -28,6 +31,9 @@ export const translations = {
     navHome: "Home",
     navBlog: "Blog",
     blogTitle: "Guides & Resources",
+    readMore: "Read more",
+    readyToTryLuck: "Ready to try your luck?",
+    callToActionDesc: "Try our free and personalized random roulette today.",
   },
   ko: {
     languageName: "한국어",
@@ -43,6 +49,9 @@ export const translations = {
     navHome: "홈",
     navBlog: "블로그",
     blogTitle: "가이드 및 리소스",
+    readMore: "더 보기",
+    readyToTryLuck: "당신의 운을 시험해 볼 준비가 되셨나요?",
+    callToActionDesc: "지금 바로 무료 맞춤형 랜덤 룰렛을 사용해 보세요.",
   },
 };
 
