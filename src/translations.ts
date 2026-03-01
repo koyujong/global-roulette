@@ -1,0 +1,40 @@
+export const translations = {
+  es: {
+    languageName: "Español",
+    title: "Ruleta Aleatoria Global",
+    subtitle: "¡Añade nombres y gira la ruleta para decidir!",
+    inputPlaceholder: "Ingresa los nombres aquí...\n(Uno por línea)",
+    shuffleBtn: "Mezclar",
+    spinBtn: "¡GIRAR!",
+    winnerTitle: "¡Ganador!",
+    removeWinnerBtn: "Eliminar a {name} y reintentar",
+    closeBtn: "Cerrar",
+    entriesCount: "Entradas",
+  },
+  en: {
+    languageName: "English",
+    title: "Global Custom Wheel",
+    subtitle: "Add names and spin the wheel to decide!",
+    inputPlaceholder: "Enter names here...\n(One per line)",
+    shuffleBtn: "Shuffle",
+    spinBtn: "SPIN!",
+    winnerTitle: "Winner!",
+    removeWinnerBtn: "Remove {name} & Spin again",
+    closeBtn: "Close",
+    entriesCount: "Entries",
+  },
+  ko: {
+    languageName: "한국어",
+    title: "글로벌 랜덤 결정 룰렛",
+    subtitle: "이름을 넣고 룰렛을 돌려보세요!",
+    inputPlaceholder: "여기에 이름 입력...\n(엔터로 구분)",
+    shuffleBtn: "섞기",
+    spinBtn: "돌리기!",
+    winnerTitle: "당첨자!",
+    removeWinnerBtn: "{name} 제외하고 다시 돌리기",
+    closeBtn: "닫기",
+    entriesCount: "항목",
+  },
+};
+
+export type LanguageCode = keyof typeof translations;
