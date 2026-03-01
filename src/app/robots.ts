@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://global-roulette.vercel.app/sitemap.xml',
+    sitemap: 'https://roulette.4kdrivewalk.com/sitemap.xml',
   };
 }

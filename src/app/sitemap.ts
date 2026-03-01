@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   // Using a placeholder domain. User can update this in Vercel Env vars if needed, 
   // but for now we'll use the canonical link logic.
-  const baseUrl = 'https://global-roulette.vercel.app'; 
+  const baseUrl = 'https://roulette.4kdrivewalk.com'; 
   
   return [
     {
