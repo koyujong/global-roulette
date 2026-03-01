@@ -19,10 +19,8 @@ export default function AdUnit({ position }: { position: "top" | "bottom" }) {
   }, []);
 
   return (
-    <div className="w-full min-h-[250px] bg-indigo-50/30 border border-dashed border-indigo-100 rounded-xl my-4 py-8 flex items-center justify-center relative overflow-hidden group" ref={adRef}>
-      <span className="absolute z-0 text-indigo-200 text-sm font-medium tracking-widest uppercase pointer-events-none">
-        Advertisement
-      </span>
+    <div className="w-full min-h-[250px] my-4 py-8 flex items-center justify-center relative overflow-hidden" ref={adRef}>
+      {/* Advertisement slot */}
       
       <ins
           className="adsbygoogle relative z-10 block"
