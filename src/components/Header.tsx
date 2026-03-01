@@ -2,21 +2,50 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Globe } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
+  const pathname = usePathname();
 
   return (
     <header className="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* Logo or Title Place */}
-          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-400 to-indigo-500 animate-spin-slow shadow-md flex items-center justify-center">
-            <div className="w-3 h-3 bg-white rounded-full" />
-          </div>
-          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-indigo-600 hidden sm:block">
-            {t.title}
-          </h1>
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="flex items-center gap-2 group">
+            {/* Logo or Title Place */}
+            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-400 to-indigo-500 animate-spin-slow shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-3 h-3 bg-white rounded-full" />
+            </div>
+            <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-indigo-600 hidden md:block">
+              {t.title}
+            </h1>
+          </Link>
+
+          {/* Navigation Tabs */}
+          <nav className="flex items-center gap-1 sm:gap-2">
+            <Link 
+              href="/" 
+              className={`px-3 py-2 rounded-xl text-sm font-bold transition-all ${
+                pathname === "/" 
+                ? "bg-indigo-50 text-indigo-600" 
+                : "text-slate-500 hover:text-slate-700 hover:bg-gray-50"
+              }`}
+            >
+              {t.navHome}
+            </Link>
+            <Link 
+              href="/blog" 
+              className={`px-3 py-2 rounded-xl text-sm font-bold transition-all ${
+                pathname.startsWith("/blog") 
+                ? "bg-indigo-50 text-indigo-600" 
+                : "text-slate-500 hover:text-slate-700 hover:bg-gray-50"
+              }`}
+            >
+              {t.navBlog}
+            </Link>
+          </nav>
         </div>
 
         <div className="flex items-center gap-3">

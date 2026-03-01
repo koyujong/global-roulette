@@ -18,15 +18,6 @@ export const metadata: Metadata = {
       "naver-site-verification": "5ff20dbd9471cf70b9281a5a10fa7c47b0ac99c0",
     },
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      "es": "/?lang=es",
-      "en": "/?lang=en",
-      "ko": "/?lang=ko",
-      "x-default": "/",
-    },
-  },
 };
 
 export default function RootLayout({

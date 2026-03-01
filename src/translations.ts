@@ -10,6 +10,9 @@ export const translations = {
     removeWinnerBtn: "Eliminar a {name} y reintentar",
     closeBtn: "Cerrar",
     entriesCount: "Entradas",
+    navHome: "Inicio",
+    navBlog: "Blog",
+    blogTitle: "Guías y Recursos",
   },
   en: {
     languageName: "English",
@@ -22,6 +25,9 @@ export const translations = {
     removeWinnerBtn: "Remove {name} & Spin again",
     closeBtn: "Close",
     entriesCount: "Entries",
+    navHome: "Home",
+    navBlog: "Blog",
+    blogTitle: "Guides & Resources",
   },
   ko: {
     languageName: "한국어",
@@ -34,6 +40,9 @@ export const translations = {
     removeWinnerBtn: "{name} 제외하고 다시 돌리기",
     closeBtn: "닫기",
     entriesCount: "항목",
+    navHome: "홈",
+    navBlog: "블로그",
+    blogTitle: "가이드 및 리소스",
   },
 };
 
