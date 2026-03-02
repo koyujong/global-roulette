@@ -2,6 +2,12 @@
 
 import { useEffect, useRef } from "react";
 
+// AdSense slot IDs (same publisher as site 1: ca-pub-3488637908196788)
+const SLOT_IDS = {
+  top: "6780266694",
+  bottom: "7907422200",
+};
+
 export default function AdUnit({ position }: { position: "top" | "bottom" }) {
   const adRef = useRef<HTMLDivElement>(null);
   const isAdLoaded = useRef(false);
@@ -19,16 +25,22 @@ export default function AdUnit({ position }: { position: "top" | "bottom" }) {
   }, []);
 
   return (
-    <div className="w-full min-h-[250px] my-4 py-8 flex items-center justify-center relative overflow-hidden" ref={adRef}>
-      {/* Advertisement slot */}
-      
+    <div
+      className="w-full min-h-[100px] bg-slate-100/50 dark:bg-zinc-900/30 flex items-center justify-center rounded-2xl overflow-hidden relative"
+      ref={adRef}
+    >
+      {/* Placeholder text (visible when ad is blocked or not loaded) */}
+      <span className="absolute z-0 text-slate-300 dark:text-zinc-700 text-sm font-medium tracking-widest uppercase pointer-events-none">
+        Advertisement
+      </span>
+
       <ins
-          className="adsbygoogle relative z-10 block"
-          style={{ display: "block", minWidth: "250px", width: "100%", height: "100%" }}
-          data-ad-client="ca-pub-3488637908196788"
-          data-ad-slot=""
-          data-ad-format="auto"
-          data-full-width-responsive="true"
+        className="adsbygoogle relative z-10 block"
+        style={{ display: "block", minWidth: "250px", width: "100%" }}
+        data-ad-client="ca-pub-3488637908196788"
+        data-ad-slot={SLOT_IDS[position]}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
       />
     </div>
   );

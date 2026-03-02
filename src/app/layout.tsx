@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     // 'lang' attribute is updated dynamically by LanguageProvider on the client
-    <html lang="en">
+    // suppressHydrationWarning is needed for next-themes to work properly on html tag
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google Analytics (gtag.js) */}
         <Script
@@ -51,13 +53,20 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${inter.className} bg-slate-50 text-slate-900 min-h-screen flex flex-col`}>
-        <LanguageProvider>
-          <Header />
-          <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6 flex flex-col">
-            {children}
-          </main>
-        </LanguageProvider>
+      <body className={`${inter.className} bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            <Header />
+            <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6 flex flex-col">
+              {children}
+            </main>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
