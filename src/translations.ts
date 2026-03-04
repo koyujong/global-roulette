@@ -1,7 +1,7 @@
 export const translations = {
   es: {
     languageName: "Español",
-    title: "Ruleta Aleatoria Global",
+    title: "Custom Boxing Combo Roulette",
     subtitle: "¡Añade nombres y gira la ruleta para decidir!",
     inputPlaceholder: "Ingresa los nombres aquí...\n(Uno por línea)",
     shuffleBtn: "Mezclar",
@@ -34,7 +34,7 @@ export const translations = {
   },
   en: {
     languageName: "English",
-    title: "Global Custom Wheel",
+    title: "Custom Boxing Combo Roulette",
     subtitle: "Add names and spin the wheel to decide!",
     inputPlaceholder: "Enter names here...\n(One per line)",
     shuffleBtn: "Shuffle",
@@ -67,7 +67,7 @@ export const translations = {
   },
   ko: {
     languageName: "한국어",
-    title: "글로벌 랜덤 결정 룰렛",
+    title: "Custom Boxing Combo Roulette",
     subtitle: "이름을 넣고 룰렛을 돌려보세요!",
     inputPlaceholder: "여기에 이름 입력...\n(엔터로 구분)",
     shuffleBtn: "섞기",

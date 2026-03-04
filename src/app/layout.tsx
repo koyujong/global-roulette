@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://roulette.4kdrivewalk.com"),
-  title: "Global Random Roulette - Wheel of Names",
+  title: "Custom Boxing Combo Roulette - Wheel of Names",
   description: "A fun, interactive wheel of names to make global, random decisions easily. Perfect for events, parties, and classrooms.",
   keywords: ["random roulette", "wheel of names", "ruleta aleatoria", "랜덤 룰렛", "이름 뽑기"],
   verification: {
