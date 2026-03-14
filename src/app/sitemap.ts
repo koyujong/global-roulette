@@ -33,8 +33,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog Posts (Spanish focus, but dynamically loading all)
   Object.keys(blogData).forEach((slug) => {
+    // Canonical (Spanish or default)
     routes.push({
       url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    });
+    // Spanish
+    routes.push({
+      url: `${baseUrl}/blog/${slug}?lang=es`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    });
+    // English
+    routes.push({
+      url: `${baseUrl}/blog/${slug}?lang=en`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    });
+    // Korean
+    routes.push({
+      url: `${baseUrl}/blog/${slug}?lang=ko`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
